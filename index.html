@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Recommendation System</title>
+</head>
+<body>
+
+    <h1>Weather Recommendation System<br>for Tomorrow</h1>
+
+    <form method="post" action="/predict">
+        <label>Humidity</label><br>
+        <input type="text" name="Humidity"><br><br>
+
+        <label>Temperature</label><br>
+        <input type="text" name="Temperature"><br><br>
+
+        <label>Soil</label><br>
+        <input type="text" name="Soil"><br><br>
+
+        <label>Rainfall</label><br>
+        <input type="text" name="Rainfall"><br><br>
+
+        <input type="submit" value="Predict"><br><br>
+
+        {% if result %}
+        <h1><p>Tomorrow is </p>{{ result }}</h1>
+    {% endif %}
+
+    </form>
+
+
+</body>
+
+
+<footer>
+    <p>Developed by E&TC Dept.(2021-2022),</p>
+       APCOER, PUNE
+</footer>
